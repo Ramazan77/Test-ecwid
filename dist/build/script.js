@@ -1,0 +1,1 @@
+var btn=document.getElementById("btn");btn.addEventListener("click",()=>{var url=document.getElementById('gallery-input').value;console.log(url);fetch(url).then((data)=>data.json()).then((out)=>{$.each(out.galleryImages,function(key,value){$('#gallery-wrapper').append('<img class="items__img" src="'+value.url+'"/>')})})})
